@@ -519,6 +519,8 @@ namespace msgpack23 {
             (unpack_type(args), ...);
         }
 
+        [[nodiscard]] std::size_t position() const noexcept { return position_; }
+
     private:
         std::span<B const> data_;
         std::size_t position_{0};
